@@ -13245,7 +13245,7 @@ body.is-preload .items.onload-fade-in>*>.inner {
 }
 
 ul {
-    list-style-image: url(/_next/static/media/flag.ebf1da03a458cecd9edf662e45e3a831.png)
+    list-style-image: url("../icons/flag.png")
 }
 
 .ml-20 {

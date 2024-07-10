@@ -39,7 +39,7 @@ abbr[title] {
 }
 
 b,strong {
-    font-weight: bolder
+    x font-weight: bolder;
 }
 
 code,kbd,samp {
@@ -13245,7 +13245,7 @@ body.is-preload .items.onload-fade-in>*>.inner {
 }
 
 ul {
-    list-style-image: url("../icons/flag.png")
+    list-style-image: url("../icons/og-flag.png")
 }
 
 .ml-20 {

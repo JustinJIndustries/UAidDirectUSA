@@ -9,6 +9,21 @@
 <noscript>
 <link rel="stylesheet" href="assets/css/noscript.css" />
 </noscript>
+        <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const copyButtons = document.querySelectorAll('.copy-button');
+            copyButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const copyText = button.previousElementSibling.textContent;
+                    navigator.clipboard.writeText(copyText).then(() => {
+                        alert('Text copied to clipboard');
+                    }).catch(err => {
+                        console.error('Failed to copy text: ', err);
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 
 <body class="is-preload">
@@ -28,17 +43,21 @@
         <p><strong>IBAN</strong>:</p>
         <ul>
           <li><strong>Recipient name</strong>: UAid Direct Help</li>
-          <li><strong>EUR</strong>: xxxxxxxx
-            <button class="tiny ml-20">Copy</button>
+            <div class="copy-container">
+                <li><strong>EUR</strong>: <span class="copy-text">xxxxxxxx</span>
+            <button class="tiny ml-20 copy-button">Copy</button>
           </li>
-          <li><strong>GBP</strong>: xxxxxxxx
-            <button class="tiny ml-20">Copy</button>
+            <div class="copy-container">
+                <li><strong>GBP</strong>: <span class="copy-text">xxxxxxxx</span>
+            <button class="tiny ml-20 copy-button">Copy</button>
           </li>
-          <li><strong>USD</strong>: xxxxxxxx
-            <button class="tiny ml-20">Copy</button>
+            <div class="copy-container">
+                <li><strong>USD</strong>: <span class="copy-text">xxxxxxxx</span>
+            <button class="tiny ml-20 copy-button">Copy</button>
           </li>
-          <li><strong>SWIFT</strong>: xxxxxxxx
-            <button class="tiny ml-20">Copy</button>
+            <div class="copy-container">    
+                <li><strong>SWIFT</strong>: <span class="copy-text">xxxxxxxx</span>
+            <button class="tiny ml-20 copy-button">Copy</button>
           </li>
           <li><strong>Address</strong>: ## street, city/town, ######, country</li>
           <li><strong>Bank details</strong>: bank name, ## street, city/town, ###### country</li>
@@ -47,14 +66,16 @@
         <ul>
           <li><strong>Recipient name</strong>: xxxxxxxx </li>
           <li><strong>Recipient code</strong>: ########</li>
-          <li><strong>IBAN</strong>: xxxxxxxx
-            <button class="tiny ml-20" label="copy IBAN">Copy</button>
+            <div class="copy-container">
+              <li><strong>IBAN</strong>:<span class="copy-text">xxxxxxxx</span>
+            <button class="tiny ml-20 copy-button" label="copy IBAN">Copy</button>
           </li>
+            </div>
           <li><strong>Bank name</strong>: bank name</li>
         </ul>
         <h3>3. GoFundMe</h3>
         <div class="is-preload" data-url="https://www.gofundme.com/f/uaid-direct-humanitarian-relief-for-ukraine/widget/large">
-          <iframe class="is-preload" width="100%" height="640" frameborder="0" scrolling="no" src="https://www.gofundme.com/f/uaid-direct-humanitarian-relief-for-ukraine/widget/large/?utm_content=uaid-directUSA;utm_medium=referral&amp;utm_source=widget#:~:tcm-regime=GDPR&amp;tcm-prompt=Hidden"></iframe>
+          <iframe class="is-preload" width="100%" height="600" frameborder="0" scrolling="no" src="https://www.gofundme.com/f/uaid-direct-humanitarian-relief-for-ukraine/widget/large/?utm_content=uaid-directUSA;utm_medium=referral&amp;utm_source=widget#:~:tcm-regime=GDPR&amp;tcm-prompt=Hidden"></iframe>
         </div>
       </div>
     </article>

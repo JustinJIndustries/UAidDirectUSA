@@ -8298,11 +8298,11 @@ hr {
     padding: 0 2em
 }
 
-.button.tiny,button.tiny {
+button.tiny {
     font-size: .6rem;
     height: 2em;
     line-height: 2em;
-    border-radius: 1.5em;
+    border-radius: 1em;
     padding: 0 1.5em
 }
 
@@ -13214,7 +13214,7 @@ body.is-preload .items.onload-fade-in>*>.inner {
 }
 
 .top-bar img {
-    max-height: 50px
+    max-height: 70px
 }
 
 .top-bar a:first-child {
